@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.logo h1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 34px;
+    color: white;
+}
+
+.logo h1 img {
+    position: relative;
+    top: -3px; 
+}
+
+.generos {
+    position: absolute;
+    top: 40px;
+    left: 300px;
+}
+
+.generos_btn {
+    background-color: #262626; 
+    border: none;
+    color: #DDE6ED;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu_generos {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #262626;
+    padding: 30px;
+    border-radius: 15px;
+    display: none;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 20px
+}
+
+.menu_generos a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.menu_generos a:hover {
+  color: black;
+}
+
+.menu_generos.ativo {
+    display: flex;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search {
+    background-color: #9DB2BF;
+    width: 250px;
+    height: 26px;
+    border: none;
+    border-radius: 100px;
+    padding: 0 25px;
+    color: white;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 17px;
+}
+
+.perfil {
+    border-radius: 50%;
+}
+
+main {
+    background-color: #0C0D0D; 
+    padding: 20px 40px;
+    text-align: center;
+}
+
+h2 {
+    color: #DDE6ED;
+    font-size: 60px;
+    display: inline-block;
+    padding: 10px 300px;
+    border-radius: 100px;
+    background-color: #262626; 
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.filmes_recomendados h3 {
+    color: #DDE6ED;
+    font-size: 30px;
+    margin-left: 20px;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.melhores_filmes h3 {
+    color: #DDE6ED;
+    font-size: 30px;
+    margin-left: 20px;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.lista_filmes {
+    display: flex;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+.lista_filmes img {
+    width: 242px;
+    height: 320px;
+    border-radius: 25px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3 ease;
+}
+
+.lista_filmes img:hover {
+    transform: scale(1.08);
+}
+
+.filmes_recomendados {
+    margin-bottom: 30px;
+}
+
+.melhores_filmes {
+    padding-bottom: 20px;
+}
+
+footer {
+    background-color: #262626;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*MOBILE: 768px*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .logo h1 {
+        font-size: 40px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .generos {
+        position: relative;
+        top: -5px;
+        left: -10px;
+    }
+
+    .menu_generos {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+
+    .menu_generos.ativo {
+        display: flex;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .search {
+        margin: 0;
+    }
+
+    .perfil {
+        position: absolute;
+        right: 15px;
+    }
+
+    .lista_filmes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    h2 {
+        padding: 5px 150px;
+    }
+
+    .lista_filmes img {
+        width: 45%;
+        height: auto;
+    }
+}
+
+/*MOBILE: 425px*/
+@media (max-width: 425px) {
+    header {
+        width: 100%;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo h1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .generos {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu_generos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu_generos a {
+        font-size: 20px;
+    }
+
+    .coluna {
+        width: 100%;
+        margin: 0;
+    }
+
+    .coluna:first-child {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        width: 100%;
+        position: relative;
+        min-height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 16px;
+    }
+
+    .search {
+        width: 75%;
+        max-width: 260px;
+    }
+
+    .perfil {
+        position: relative;
+        right: 3px;
+    }
+
+    h2 {
+        padding: 10px 50px;
+        font-size: 50px;
+    }
+
+    h3 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .lista_filmes img {
+        width: 45%;
+        height: auto;
+    }
+}
